@@ -17,8 +17,9 @@ spec:
       containers:
         - name: app2-nginx
           image: mdshahidahmad/app2-nginxapp2:1.0.0
-          ports:
-            - containerPort: 80
+          env:
+          - name: "PORT"
+            value: "50000"
       nodeSelector:
         app: node2-apps
 

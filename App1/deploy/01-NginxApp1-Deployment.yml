@@ -17,8 +17,9 @@ spec:
       containers:
         - name: app1-nginx
           image: mdshahidahmad/app1-nginxapp1:1.0.0
-          ports:
-            - containerPort: 80
+          env:
+          - name: "PORT"
+            value: "50000"
       nodeSelector:
         app: node1-apps
 
